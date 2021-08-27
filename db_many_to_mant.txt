@@ -1,0 +1,24 @@
+database many-to-many
+
+id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+title varchar(50)
+);
+
+create table seasons(
+id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+description varchar(20)
+);
+
+#Definiendo el nombre en el modelo jobs, al lado de la relacion
+create table assign_seasons(
+id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+job_id int,
+season_id int
+);
+
+#Sin definir
+create table job_season(
+id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+job_id int,
+season_id int
+);
